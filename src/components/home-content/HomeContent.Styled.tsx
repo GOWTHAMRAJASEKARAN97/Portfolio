@@ -47,8 +47,8 @@ namespace S {
     top: "50%",
     left: "50%",
     textAlign: "center",
-    h1: {
-      fontSize: "4rem",
+    marginBottom: "1rem",
+    h2: {
       padding: "0.6rem 0 1.5rem",
     },
     p: {
@@ -61,18 +61,19 @@ namespace S {
   export const StyledLink = styled(Link)({
     textTransform: "uppercase",
     backgroundColor: "rgb(8, 71, 22,.5)",
-    padding: "1rem 2rem",
+
     border: "none",
     borderRadius: ".5rem",
+    fontSize: "1rem",
     "&:hover": {
       backgroundColor: "rgb(8, 71, 22)",
     },
   });
   export const StyledButton = styled(Button)({
+    fontSize: ".8rem",
     marginTop: "1rem",
     textTransform: "uppercase",
     backgroundColor: "rgb(8, 71, 22,.5)",
-    padding: "1rem 2rem",
     border: "none",
     color: "white",
     borderRadius: ".5rem",

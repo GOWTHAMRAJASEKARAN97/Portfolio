@@ -1,4 +1,5 @@
 import { Swiper } from "swiper/react";
+import { useMediaQuery } from "@mui/material";
 import { Navigation, Pagination, Scrollbar, Parallax, Autoplay } from "swiper";
 import S from "./TechSTack.Styled";
 import "swiper/css";
@@ -14,8 +15,11 @@ import reactRedux from "../../assets/techstack/reduxLogo.svg";
 import sass from "../../assets/techstack/sassLogo.svg";
 import styledComponents from "../../assets/techstack/styledComponentsLogo.png";
 import mui from "../../assets/techstack/mui.png";
+import ts from "../../assets/techstack/typescript.jpg";
+import hookForms from "../../assets/techstack/hookfroms.jpg";
 
 const TechStack = () => {
+  const matches = useMediaQuery("(max-width:1140px)");
   const stackArray: string[] = [
     html,
     css,
@@ -26,6 +30,8 @@ const TechStack = () => {
     sass,
     styledComponents,
     mui,
+    ts,
+    hookForms,
   ];
   return (
     <>
@@ -34,11 +40,12 @@ const TechStack = () => {
         style={{
           display: "flex",
           justifyContent: "center",
+          marginTop: ".5rem",
           alignItems: "center",
-          marginTop: "1rem",
+          height: matches ? "80%" : "100%",
         }}
       >
-        <h1>TeckStack</h1>
+        <h1>TechStack</h1>
       </div>
       <S.SwiperContainer sx={{ backgroundColor: "#000" }}>
         <Swiper

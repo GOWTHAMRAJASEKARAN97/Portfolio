@@ -1,6 +1,6 @@
 import jsPDF from "jspdf";
-// import Typical from "react-typical";
 import { useMediaQuery } from "@mui/material";
+import { Typewriter } from "react-simple-typewriter";
 import Resume from "../../assets/resume.jpg";
 import BackgroundImage from "../../assets/gowtham.jpg";
 import S from "./HomeContent.Styled";
@@ -20,24 +20,35 @@ const HomeContent = () => {
         <img src={BackgroundImage} alt="IntroImg" />
       </S.Mask>
       <S.Content>
-        {/* <div style={{ fontSize: matches ? "1.4rem" : "1.4rem" }}>
-          <Typical
-            steps={[
-              "HI, I'M A WEB DEVELOPER.",
-              1000,
-              "HI, I'M A REACT JS DEVELOPER.",
-              500,
+        <h3 style={{ color: "white", fontSize: matches ? "2rem" : "3rem" }}>
+          GOWTHAM RAJASEKARAN
+        </h3>
+        <h2
+          style={{
+            color: "white",
+            fontSize: matches ? "1rem" : "1.5rem",
+          }}
+        >
+          <Typewriter
+            words={[
+              "I'm a React.js Developer",
+              "I'm a Javascript Developer",
+              "I'm a Web developer",
             ]}
-            loop={Infinity}
-            wrapper="p"
+            loop={false}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+            onLoopDone={() => {}}
+            onType={() => {}}
           />
-        </div> */}
-        <h1 style={{ fontSize: matches ? "3rem" : "4rem" }}>GOWTHAM.R</h1>
-        <S.ButtonContainer>
-          <S.StyledLink to="/projects">Projects</S.StyledLink>
-          <S.StyledLink to="/contact">Contact</S.StyledLink>
-        </S.ButtonContainer>
-        <S.StyledButton onClick={handleResumeDownload}>
+        </h2>
+        <S.StyledButton
+          onClick={handleResumeDownload}
+          sx={{ padding: matches ? ".5rem 1rem" : "1rem 2rem" }}
+        >
           Download Resume
         </S.StyledButton>
       </S.Content>

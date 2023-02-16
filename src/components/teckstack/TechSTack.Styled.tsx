@@ -15,9 +15,7 @@ namespace S {
     ".swiper-button-next:after": {
       size: "5%",
     },
-    ".swiper-horizontal": {
-      margin: "2rem 0",
-    },
+    ".swiper-horizontal": {},
     padding: "1rem 0",
   });
   export const Container = styled("div")({

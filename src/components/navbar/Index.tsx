@@ -1,5 +1,5 @@
 import { useState, FC } from "react";
-import { Link, Navigate, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import { FaTimes, FaBars } from "react-icons/fa";
 import { useMediaQuery } from "@mui/material";
 //@ts-ignore
@@ -9,6 +9,9 @@ import S from "./Navbar.Styled";
 interface Props {}
 
 const Navbar: FC<Props> = () => {
+  const location = useLocation();
+  const isLocationHome = location.pathname === "/";
+  console.log(isLocationHome);
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const [color, setColor] = useState(false);
@@ -31,11 +34,7 @@ const Navbar: FC<Props> = () => {
           transition: color ? "0.5s" : "",
         }}
       >
-        <Link
-          to="/"
-          style={{ fontSize: "2em", fontWeight: "bold" }}
-          onClick={handleClick}
-        >
+        <Link to="/" style={{ fontSize: "2em", fontWeight: "bold" }}>
           <ShuffleText content={"Portfolio"} />
         </Link>
         <S.NavMenu
@@ -89,15 +88,17 @@ const Navbar: FC<Props> = () => {
               Contact
             </Link>
           </li>
-          <li style={{ padding: matches ? "1rem 0" : "0 1rem" }}>
-            <a
-              href="#techStack"
-              style={{ fontSize: matches ? "2rem" : "1.2rem" }}
-              onClick={handleClick}
-            >
-              Teckstack
-            </a>
-          </li>
+          {isLocationHome && (
+            <li style={{ padding: matches ? "1rem 0" : "0 1rem" }}>
+              <a
+                href="#techStack"
+                style={{ fontSize: matches ? "2rem" : "1.2rem" }}
+                onClick={handleClick}
+              >
+                Techstack
+              </a>
+            </li>
+          )}
         </S.NavMenu>
         <S.Hamburger
           sx={{ display: matches ? "initial" : "" }}

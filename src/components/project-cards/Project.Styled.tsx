@@ -4,9 +4,10 @@ namespace S {
   export const ProjectContainer = styled("div")({
     maxWidth: "1140px",
     margin: "auto",
-    display: "grid",
-    gridTemplateColumns: "repeat(2, 1fr)",
-    gridGap: "40px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    gap: "4rem",
     paddingBottom: "5rem",
   });
   export const ProjectHeading = styled("h1")({

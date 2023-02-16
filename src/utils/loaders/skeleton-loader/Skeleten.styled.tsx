@@ -4,17 +4,17 @@ namespace S {
   export const Container = styled("div")({
     display: "grid",
     gridTemplateAreas: `
-      ". nme nme nme ."
-      ". mil mil mil ."
-      ". sub sub sub ."
-      ". msg msg msg ."
-      ". . btn . ."
+      "nme nme nme"
+      "mil mil mil"
+      "sub sub sub"
+      "msg msg msg"
+      " . btn . "
     `,
     gridTemplateRows: "auto auto auto auto auto",
     columnGap: ".5rem",
     rowGap: "1rem",
     height: "100%",
-    width: "80%",
+    padding: "0 1rem",
   });
 
   export const Name = styled(Skeleton)({

@@ -11,7 +11,8 @@ const Project = () => {
       <S.ProjectContainer
         sx={{
           maxWidth: matches ? "90%" : "1140px",
-          gridTemplateColumns: matches ? "1fr" : "repeat(3, 1fr)",
+          // gridTemplateColumns: matches ? "1fr" : "repeat(3, 1fr)",
+          flexDirection: matches ? "column" : "flex",
         }}
       >
         {ProjectData.map(
