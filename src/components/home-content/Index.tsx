@@ -10,7 +10,7 @@ const HomeContent = () => {
 
   const handleResumeDownload = () => {
     let doc = new jsPDF("portrait", "px", "a4", false);
-    doc.addImage(Resume, "jpg", 10, 10, 450, 610);
+    doc.addImage(Resume, "jpg", 3.5, 11, 450, 610);
     doc.save("Gowtham_Resume.pdf");
   };
 

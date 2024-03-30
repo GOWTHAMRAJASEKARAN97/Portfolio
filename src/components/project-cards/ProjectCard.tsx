@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoNavigateSharp } from "react-icons/io5";
 import S from "./ProjectCard.Styled";

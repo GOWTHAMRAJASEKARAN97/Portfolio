@@ -1,3 +1,4 @@
+//@ts-ignore
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Footer from "./components/footer/Index";
 import Navbar from "./components/navbar/Index";
@@ -7,7 +8,7 @@ import Home from "./routes/Home";
 import Projects from "./routes/Projects";
 import { ToastContainer } from "./utils/toast/Index";
 import "react-toastify/dist/ReactToastify.css";
-import TechStack from "./components/teckstack/Index";
+// import TechStack from "./components/teckstack/Index";
 
 const App = () => {
   return (
