@@ -21,8 +21,8 @@ const WorkCard: FC<Props> = ({
   techstack,
 }) => {
   return (
-    <S.Card>
-      <img src={image} alt="project" />
+    <S.Card> 
+      <img src={image} alt="project" width={"300px"} height={"161px"}/>
       <S.Title>{title}</S.Title>
       <S.Details>
         <p>{text}</p>

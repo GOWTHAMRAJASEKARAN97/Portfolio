@@ -1,14 +1,16 @@
 //@ts-ignore
 import NetworkManagement from "../../assets/network.png";
 //@ts-ignore
-import SportsClubManagement from "../../assets/sports.png";
+// import SportsClubManagement from "../../assets/sports.png";
+import Todo from "../../assets/todo.jpg";
 //@ts-ignore
 
 import Portfolio from "../../assets/portfolio.png";
-import html from "../../assets/techstack/htmlLogo.svg";
-import css from "../../assets/techstack/cssLogo.svg";
-import js from "../../assets/techstack/javascriptLogo.svg";
+// import html from "../../assets/techstack/htmlLogo.svg";
+// import css from "../../assets/techstack/cssLogo.svg";
+// import js from "../../assets/techstack/javascriptLogo.svg";
 import react from "../../assets/techstack/reactLogo.svg";
+import node from "../../assets/techstack/node.png";
 // import reactQuery from "../../assets/techstack/reactQueryLogo.svg";
 // import reactRedux from "../../assets/techstack/reduxLogo.svg";
 // import sass from "../../assets/techstack/sassLogo.svg";
@@ -26,13 +28,21 @@ const ProjectData = [
     source: "https://github.com/GOWTHAMRAJASEKARAN97/React-task",
     techstack: [react, styledComponents],
   },
+  // {
+  //   image: SportsClubManagement,
+  //   title: "Sports Club Management",
+  //   text: "We can create a player profile according to the game category. And we can manage the player profiles like updation and deletion.We can filter players by game category using this app.",
+  //   view: " https://gowthamrajasekaran97.github.io/JS-Task/",
+  //   source: " https://github.com/GOWTHAMRAJASEKARAN97/JS-Task",
+  //   techstack: [html, css, js],
+  // },
   {
-    image: SportsClubManagement,
-    title: "Sports Club Management",
-    text: "We can create a player profile according to the game category. And we can manage the player profiles like updation and deletion.We can filter players by game category using this app.",
-    view: " https://gowthamrajasekaran97.github.io/JS-Task/",
-    source: " https://github.com/GOWTHAMRAJASEKARAN97/JS-Task",
-    techstack: [html, css, js],
+    image: Todo,
+    title: "MERN Stack Todo App",
+    text: "Simple Todo Application created with MERN.",
+    view: "https://todos-8b43.onrender.com/",
+    source: "https://github.com/GOWTHAMRAJASEKARAN97/todos",
+    techstack: [react, mui, node],
   },
   {
     image: Portfolio,
