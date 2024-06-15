@@ -1,18 +1,36 @@
-import jsPDF from "jspdf";
+// import jsPDF from "jspdf";
 import { useMediaQuery } from "@mui/material";
 import { Typewriter } from "react-simple-typewriter";
-import Resume from "../../assets/resume.jpg";
+// import Resume from "../../assets/resume.jpg";
+//@ts-ignore
+import Resume from "../../assets/Gowtham's_Resume.pdf";
 import BackgroundImage from "../../assets/gowtham.jpg";
 import S from "./HomeContent.Styled";
 
 const HomeContent = () => {
   const matches = useMediaQuery("(max-width:640px)");
 
-  const handleResumeDownload = () => {
-    let doc = new jsPDF("portrait", "px", "a4", false);
-    doc.addImage(Resume, "jpg", 3.5, 11, 450, 610);
-    doc.save("Gowtham_Resume.pdf");
-  };
+  // const handleResumeDownload = () => {
+  //   let doc = new jsPDF("portrait", "px", "a4", false);
+  //   doc.addImage(Resume, "jpg", 3.5, 11, 450, 610);
+  //   doc.save("Gowtham_Resume.pdf");
+  // };
+
+ function handleResumeDownload() {
+    // Create an invisible element
+    const element = document.createElement('a');
+    element.setAttribute('href', Resume);
+    element.setAttribute('download', "Gowtham's_Resume");
+
+    // Append the element to the document body
+    document.body.appendChild(element);
+
+    // Programmatically click the element to trigger the download
+    element.click();
+
+    // Remove the element from the document
+    document.body.removeChild(element);
+}
 
   return (
     <S.HomeContent>
